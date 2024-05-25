@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import QRCode from 'qrcode';
 import './index.css';
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4674963475856832"
+     crossorigin="anonymous"></script>
 function App() {
   const [url, setUrl] = useState('');
   const [qrcode, setQrcode] = useState('');
@@ -20,6 +21,16 @@ function App() {
     if (isValidUrl(url)) {
       QRCode.toDataURL(url, {
         width:800,
+        image:`/images/scanme.png`,
+        dotsOptions: {
+          color: "#4267b2",
+          type: "rounded"
+        },
+        imageOptions: {
+          crossOrigin: "anonymous",
+          imageSize: 0.4,
+          margin: 20
+        },
         margin:2,
         color:{
             dark: '#301934'
